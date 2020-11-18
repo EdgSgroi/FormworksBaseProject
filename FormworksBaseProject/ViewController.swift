@@ -17,6 +17,23 @@ class ViewController: UIViewController {
         presentForm()
     }
     
+    @objc private func presentForm() {
+        navigationController?.pushViewController(TestViewController(), animated: true)
+    }
+    
+    private func getJSON(for resource: String) -> Data? {
+        guard let url = Bundle.main.url(forResource: resource, withExtension: "json") else { return nil}
+        var data: Data?
+        do {
+            data = try Data(contentsOf: url)
+        } catch {
+            print(error.localizedDescription)
+        }
+        guard let jsonData = data else { return nil }
+        
+        return jsonData
+    }
+    
     private func addButtonView() {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -35,23 +52,6 @@ class ViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-    }
-
-    @objc private func presentForm() {
-        navigationController?.pushViewController(TestViewController(), animated: true)
-    }
-    
-    private func getJSON(for resource: String) -> Data? {
-        guard let url = Bundle.main.url(forResource: resource, withExtension: "json") else { return nil}
-        var data: Data?
-        do {
-            data = try Data(contentsOf: url)
-        } catch {
-            print(error.localizedDescription)
-        }
-        guard let jsonData = data else { return nil }
-        
-        return jsonData
     }
 
 }
