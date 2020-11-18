@@ -12,11 +12,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        addButtonView()
         presentForm()
     }
+    
+    private func addButtonView() {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.backgroundColor = .red
+        button.setTitle("Open Form", for: .normal)
+        button.layer.cornerRadius = 20
+        
+        view.addSubview(button)
+        
+        button.addTarget(self, action: #selector(presentForm), for: .touchDown)
+        
+        NSLayoutConstraint.activate([
+            button.widthAnchor.constraint(equalToConstant: 200),
+            button.heightAnchor.constraint(equalToConstant: 70),
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
 
-    private func presentForm() {
-        // present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: true)
+    @objc private func presentForm() {
+        navigationController?.pushViewController(TestViewController(), animated: true)
     }
     
     private func getJSON(for resource: String) -> Data? {

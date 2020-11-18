@@ -14,6 +14,7 @@
 		4F830E362565A47C003A5A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F830E352565A47C003A5A86 /* Assets.xcassets */; };
 		4F830E392565A47C003A5A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F830E372565A47C003A5A86 /* LaunchScreen.storyboard */; };
 		4F830E432565A5DA003A5A86 /* form.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F830E422565A5DA003A5A86 /* form.json */; };
+		4F830E462565A8E1003A5A86 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F830E452565A8E1003A5A86 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4F830E382565A47C003A5A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F830E3A2565A47C003A5A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F830E422565A5DA003A5A86 /* form.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = form.json; sourceTree = "<group>"; };
+		4F830E452565A8E1003A5A86 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4F830E2C2565A479003A5A86 /* AppDelegate.swift */,
 				4F830E2E2565A479003A5A86 /* SceneDelegate.swift */,
 				4F830E302565A479003A5A86 /* ViewController.swift */,
+				4F830E452565A8E1003A5A86 /* TestViewController.swift */,
 				4F830E322565A479003A5A86 /* Main.storyboard */,
 				4F830E352565A47C003A5A86 /* Assets.xcassets */,
 				4F830E372565A47C003A5A86 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F830E462565A8E1003A5A86 /* TestViewController.swift in Sources */,
 				4F830E312565A479003A5A86 /* ViewController.swift in Sources */,
 				4F830E2D2565A479003A5A86 /* AppDelegate.swift in Sources */,
 				4F830E2F2565A479003A5A86 /* SceneDelegate.swift in Sources */,
